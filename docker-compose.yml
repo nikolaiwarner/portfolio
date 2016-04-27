@@ -1,0 +1,13 @@
+mongo:
+  image: mongo
+
+meteor:
+  image: danieldent/meteor
+  links:
+    - mongo
+  volumes:
+    - ./:/app
+  ports:
+    - 3000:3000
+  environment:
+    MONGO_URL: mongodb://db

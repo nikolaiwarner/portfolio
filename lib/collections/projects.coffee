@@ -63,7 +63,7 @@ projectsSchema = new SimpleSchema
     Roles.userIsInRole(userId, 'admin')
   update: (userId, doc, fieldNames, modifier) ->
     # Only admins can update
-    Roles.userIsInRole(userId, 'admin') ||
+    Roles.userIsInRole(userId, 'admin')
   remove: (userId, doc, fieldNames, modifier) ->
     # Only admins can remove
     Roles.userIsInRole(userId, 'admin')

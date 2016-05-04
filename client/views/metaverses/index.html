@@ -1,0 +1,15 @@
+<template name="metaverseIndex">
+  {{>metaversesNav}}
+  
+  <ul>
+  {{#each metaverses}}
+    <li>
+      <a href="/metaverses/{{_id}}">{{name}} - {{_id}}</a>
+    </li>
+  {{/each}}
+  </ul>
+
+  <hr>
+
+  {{>metaverseForm}}
+</template>

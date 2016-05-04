@@ -1,9 +1,9 @@
 Router.configure
   layoutTemplate: 'layout'
-  loadingTemplate: 'page_loading'
-  notFoundTemplate: 'page_notfound'
+  loadingTemplate: 'pageLoading'
+  notFoundTemplate: 'pageNotfound'
 
-Router.plugin 'dataNotFound', {notFoundTemplate: 'page_notfound'}
+Router.plugin 'dataNotFound', {notFoundTemplate: 'pageNotfound'}
 
 Router.before ->
   # Subscribe on all routes

@@ -1,0 +1,41 @@
+<template name="metaverseObjectForm">
+  <div class="card">
+  {{#autoForm collection="MetaverseObjects" id="metaverseObjectForm" doc=metaverseObject type=method}}
+    {{> afFieldInput name="metaverseId" type="hidden" value=metaverse._id}}
+    <div class="card-content">
+      <div class="form-group">
+        <label class="control-label" for="name">Name</label>
+        {{> afFieldInput name='name' type='text'}}
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="description">Description</label>
+        {{> afFieldInput id='description' name='description' type='textarea' rows=10}}
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="position">Position</label>
+        {{> afFieldInput name='position' type='text'}}
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="rotation">Rotation</label>
+        {{> afFieldInput name='rotation' type='text'}}
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="geometry">Geometry</label>
+        {{> afFieldInput name='geometry' type='text'}}
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="material">Material</label>
+        {{> afFieldInput name='material' type='text'}}
+      </div>
+    </div>
+
+    <div class="card-action">
+      {{#if metaverseObject._id}}
+        <button type="submit" class="btn btn-primary update">Save</button>
+      {{else}}
+        <button type="submit" class="btn btn-primary insert">Create</button>
+      {{/if}}
+    </div>
+  {{/autoForm}}
+  </div>
+</template>

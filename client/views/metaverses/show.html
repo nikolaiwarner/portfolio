@@ -1,0 +1,18 @@
+<template name="metaverseShow">
+  {{>metaversesNav}}
+
+  {{#aScene}}
+    <a-assets>
+    </a-assets>
+
+    {{#aSky color="#00CCFF"}}{{/aSky}}
+
+    {{#each metaverseObjects}}
+      <a-entity position="{{position}}" rotation="{{rotation}}" geometry="{{geometry}}" material="{{material}}"></a-entity>
+    {{/each}}
+
+  {{/aScene}}
+
+  {{> metaverseObjectForm}}
+
+</template>

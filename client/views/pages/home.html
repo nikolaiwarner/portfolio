@@ -1,5 +1,12 @@
-<template name="page_home">
+<template name="pageHome">
   {{#aScene}}
+
+  <a-assets>
+    <img id="gif1" src="http://49.media.tumblr.com/996c3555c5a041c8387430f80cc2e405/tumblr_n5up4yOwB11qz8823o1_400.gif">
+  </a-assets>
+
+
+
     <!-- <a-entity camera look-controls wasd-controls></a-entity> -->
 <!--
     {{#aSphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"}}{{/aSphere}}
@@ -7,11 +14,16 @@
     {{#aCylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"}}{{/aCylinder}} -->
 
     <!-- {{#aImage src="http://nwarner.com/images/water.gif" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"}}{{/aImage}} -->
-    {{#aCurvedimage src="http://nwarner.com/images/water.gif" radius="5.7" theta-length="72" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"}}{{/aCurvedimage}}
+    <!-- {{#aCurvedimage src="http://nwarner.com/images/water.gif" radius="5.7" theta-length="72" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"}}{{/aCurvedimage}}
 
-    {{#aImage src="http://nwarner.com/images/nick.png" position="1 1 1"}}{{/aImage}}
+    {{#aImage src="http://nwarner.com/images/nick.png" position="1 1 1"}}{{/aImage}} -->
 
-    {{#aSky color="#ECECEC"}}{{/aSky}}
+    {{#aSky color="#00CCFF"}}{{/aSky}}
+
+    <a-entity position="0 -20 -20" rotation="-90 0 0" geometry="primitive:plane;width:1000;height:1000" material="shader:gif; src:#gif1;"></a-entity>
+    <a-entity position="0 20 20" rotation="90 0 0" geometry="primitive:plane;width:1000;height:1000" material="shader:gif; src:#gif1;"></a-entity>
+
+    <a-entity geometry="primitive:plane" material="shader:video; src:url(video.mp4);"></a-entity>
 
   {{/aScene}}
 </template>

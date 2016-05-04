@@ -1,0 +1,21 @@
+<template name="metaversesNav">
+  <div class="navbar-fixed navbar-top">
+    <div class="nav-wrapper">
+      <a href="/metaverses" class="logo">Nick Warner's Metaverses</a>
+      {{#with metaverse}}
+        : <a href="/metaverses/{{_id}}">{{name}}</a>
+          <a href="/metaverses/{{_id}}/edit"><i class="tiny material-icons">mode_edit</i></a>
+      {{/with}}
+      <div class="right">
+        {{#if currentUser}}
+          <a href="/signout">Sign Out</a>
+        {{else}}
+          <a href="/signin">Sign In</a>
+        {{/if}}
+        {{#if isInRole 'admin'}}
+          <a href="/admin" class="admin">Admin</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -17,6 +17,7 @@ standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
+service-configuration
 underscore
 spiderable
 edgee:slingshot
@@ -25,7 +26,12 @@ coffeescript
 alanning:roles
 fastclick
 accounts-google
+accounts-password
 iron:router
 aldeed:collection2
 aldeed:autoform
 vladbalan:aframe
+todda00:friendly-slugs
+materialize:materialize
+useraccounts:iron-routing
+useraccounts:materialize

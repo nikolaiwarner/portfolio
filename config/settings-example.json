@@ -1,0 +1,41 @@
+{
+  "authentication": {
+    "facebook": {
+      "appId": "12345678",
+      "secret": "12345678"
+    },
+    "google": {
+      "clientId": "12345678",
+      "secret": "12345678"
+    }
+  },
+  "googleServerApiKey": "12345678",
+  "S3Bucket": "bucketname",
+  "AWSRegion": "us-west-2",
+  "AWSAccessKeyId": "1234asdf",
+  "AWSSecretAccessKey": "asdf1234",
+  "defaultAdmin": {
+    "email": "email@email.com",
+    "username": "admin",
+    "password": "password"
+  },
+  "public": {
+    "environment": "development",
+    "domain": "domain.com",
+    "googleMapsApiKey": "1234578",
+    "houston_root_route": "/admin/houston",
+    "allowed_file_types": [
+      "image/png",
+      "image/jpg",
+      "image/jpeg",
+      "image/gif",
+      "video/mp4",
+      "video/quicktime",
+      "video/ogg",
+      "video/webm"
+    ],
+    "analyticsSettings": {
+      "Google Analytics" : {"trackingId": "Your tracking ID"}
+    }
+  }
+}

@@ -1,18 +1,35 @@
 <template name="metaverseShow">
   {{>metaversesNav}}
 
-  {{#aScene}}
-    <a-assets>
-    </a-assets>
+  <div class="row">
+    <div class="col s8">
+      {{#aScene}}
+        <a-assets>
+        </a-assets>
 
-    {{#aSky color="#00CCFF"}}{{/aSky}}
+        <a-camera position="0 1.8 5">
+          <a-entity
+            cursor="maxDistance: 30; timeout: 500"
+            position="0 0 -0.5"
+            geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01; segmentsTheta: 32"
+            material="color: #ffffff; shader: flat; opacity: 0.5;">
+          </a-entity>
+        </a-camera>
 
-    {{#each metaverseObjects}}
-      <a-entity position="{{position}}" rotation="{{rotation}}" geometry="{{geometry}}" material="{{material}}"></a-entity>
-    {{/each}}
+        {{#aSky color="#00CCFF"}}{{/aSky}}
 
-  {{/aScene}}
+        <a-entity selectable>
+          {{#each metaverseObjects}}
+            <a-entity id="{{_id}}" position="{{position}}" rotation="{{rotation}}" geometry="{{geometry}}" material="{{material}}"></a-entity>
+          {{/each}}
+        </a-entity>
 
-  {{> metaverseObjectForm}}
+      {{/aScene}}
+    </div>
+
+    <div class="col s8">
+      {{> metaverseObjectForm}}
+    </div>
+  </div>
 
 </template>
